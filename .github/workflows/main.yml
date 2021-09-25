@@ -10,7 +10,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  Sync:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -25,16 +25,10 @@ jobs:
         uses: dexter-stpierre/diiggo-to-readwise@0.0.3
         with:
           # 
-          DIIGO_API_KEY: ${{ secrets.DIIGO_API_KEY }} # optional, default is ${{ secrets.DIIGO_API_KEY }}
+          diigoApiKey: ${{ secrets.DIIGO_API_KEY }} # optional, default is ${{ secrets.DIIGO_API_KEY }}
           # 
-          DIIGO_USERNAME: ${{ secrets.DIIGO_USERNAME }} # optional
+          diigoUsername: ${{ secrets.DIIGO_USERNAME }} # optional
           # 
-          DIIGO_PASSWORD: ${{ secrets.DIIGO_PASSWORD }} # optional
+          diigoPassword: ${{ secrets.DIIGO_PASSWORD }} # optional
           # 
-          READWISE_TOKEN: ${{ secrets.READWISE_TOKEN }} # optional
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          readwiseToken: ${{ secrets.READWISE_TOKEN }} # optional
