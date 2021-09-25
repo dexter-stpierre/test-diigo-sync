@@ -22,7 +22,7 @@ jobs:
       - name: Sync Diigo Highlights to Readwise
         # You may pin to the exact commit or the version.
         # uses: dexter-stpierre/diiggo-to-readwise@1362c38a71f01b3d780ae1439e2bf16004e7119b
-        uses: dexter-stpierre/diiggo-to-readwise@0.0.6
+        uses: dexter-stpierre/diiggo-to-readwise@0.0.7
         with:
           # 
           diigoApiKey: ${{ secrets.DIIGO_API_KEY }} # optional, default is ${{ secrets.DIIGO_API_KEY }}
